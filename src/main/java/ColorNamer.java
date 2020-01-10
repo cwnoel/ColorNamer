@@ -14,26 +14,25 @@ public class ColorNamer {
 
     @POST
     @Produces("text/plain")
-
     public Response convertPost(@QueryParam("origColor") String origColor) {
 
-        ArrayList<String> Blues2 = new ArrayList<String>();
-        Blues2.add("aqua");
-        Blues2.add("azul");
-        Blues2.add("turquoise");
-        Blues2.add("blue");
+        ArrayList<String> Blues = new ArrayList<String>();
+        Blues.add("aqua");
+        Blues.add("azul");
+        Blues.add("turquoise");
+        Blues.add("blue");
 
-        ArrayList<String> Greens2 = new ArrayList<String>();
-        Greens2.add("chartreuse");
-        Greens2.add("moss");
-        Greens2.add("forest");
-        Greens2.add("green");
+        ArrayList<String> Greens = new ArrayList<String>();
+        Greens.add("chartreuse");
+        Greens.add("moss");
+        Greens.add("forest");
+        Greens.add("green");
 
-        if (Blues2.contains(origColor.toLowerCase())) {
+        if (Blues.contains(origColor.toLowerCase())) {
             return Response.ok("Blue").build();
         }
 
-        if (Greens2.contains(origColor.toLowerCase())) {
+        if (Greens.contains(origColor.toLowerCase())) {
             return Response.ok("Green").build();
         }
 
