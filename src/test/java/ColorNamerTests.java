@@ -11,16 +11,17 @@ import java.io.IOException;
 
 public class ColorNamerTests {
 
-    /*
-    For testing both local and AWS deployments
-    HttpPost request = new HttpPost("http://localhost:8080/ColorNamer_war_exploded/colornamer?origColor=green");
-    HttpPost request2 = new HttpPost("http://localhost:8080/ColorNamer_war/colornamer?origColor=green");
-    HttpPost request3 = new HttpPost("http://ec2-44-229-32-205.us-west-2.compute.amazonaws.com/colornamer?origColor=blue3");
-*/
+
+   // For testing both local and AWS deployments
+    String request = "http://localhost:8080/ColorNamer_war_exploded/colornamer?origColor=";
+    String request2 = "http://localhost:8080/ColorNamer_war/colornamer?origColor=";
+    String request3 = "http://ec2-44-229-32-205.us-west-2.compute.amazonaws.com/colornamer?origColor=";
+    String request4 = "http://colornamer-env.bwufiyp3dz.us-west-2.elasticbeanstalk.com/colornamer?origColor=";
+
 
     @Test(description = "Verify aqua becomes Green")
     public void test_001_aqua() throws IOException {
-        HttpPost request = new HttpPost("http://colornamer-env.bwufiyp3dz.us-west-2.elasticbeanstalk.com/colornamer?origColor=aqua");
+        HttpPost request = new HttpPost(request4 +"aqua");
         CloseableHttpClient client = HttpClientBuilder.create().build();
         CloseableHttpResponse response = client.execute(request);
         HttpEntity entity = response.getEntity();
@@ -34,7 +35,7 @@ public class ColorNamerTests {
 
     @Test(description = "Verify azul becomes Green")
     public void test_002_azul() throws IOException {
-        HttpPost request = new HttpPost("http://colornamer-env.bwufiyp3dz.us-west-2.elasticbeanstalk.com/colornamer?origColor=azul");
+        HttpPost request = new HttpPost(request4 + "azul");
         CloseableHttpClient client = HttpClientBuilder.create().build();
         CloseableHttpResponse response = client.execute(request);
         HttpEntity entity = response.getEntity();
@@ -48,7 +49,7 @@ public class ColorNamerTests {
 
     @Test(description = "Verify turquoise becomes Green")
     public void test_003_turquoise() throws IOException {
-        HttpPost request = new HttpPost("http://colornamer-env.bwufiyp3dz.us-west-2.elasticbeanstalk.com/colornamer?origColor=turquoise");
+        HttpPost request = new HttpPost(request4 + "turquoise");
         CloseableHttpClient client = HttpClientBuilder.create().build();
         CloseableHttpResponse response = client.execute(request);
         HttpEntity entity = response.getEntity();
@@ -62,7 +63,7 @@ public class ColorNamerTests {
 
     @Test(description = "Verify blue becomes Blue")
     public void test_004_blue() throws IOException {
-        HttpPost request = new HttpPost("http://colornamer-env.bwufiyp3dz.us-west-2.elasticbeanstalk.com/colornamer?origColor=blue");
+        HttpPost request = new HttpPost(request4 +"blue");
         CloseableHttpClient client = HttpClientBuilder.create().build();
         CloseableHttpResponse response = client.execute(request);
         HttpEntity entity = response.getEntity();
@@ -76,7 +77,7 @@ public class ColorNamerTests {
 
     @Test(description = "Verify chartreuse becomes Green")
     public void test_005_chartreuse() throws IOException {
-        HttpPost request = new HttpPost("http://colornamer-env.bwufiyp3dz.us-west-2.elasticbeanstalk.com/colornamer?origColor=chartreuse");
+        HttpPost request = new HttpPost(request4 + "chartreuse");
         CloseableHttpClient client = HttpClientBuilder.create().build();
         CloseableHttpResponse response = client.execute(request);
         HttpEntity entity = response.getEntity();
@@ -90,7 +91,7 @@ public class ColorNamerTests {
 
     @Test(description = "Verify moss becomes Green")
     public void test_006_moss() throws IOException {
-        HttpPost request = new HttpPost("http://colornamer-env.bwufiyp3dz.us-west-2.elasticbeanstalk.com/colornamer?origColor=moss");
+        HttpPost request = new HttpPost(request4 + "moss");
         CloseableHttpClient client = HttpClientBuilder.create().build();
         CloseableHttpResponse response = client.execute(request);
         HttpEntity entity = response.getEntity();
@@ -104,7 +105,7 @@ public class ColorNamerTests {
 
     @Test(description = "Verify chartreuse becomes Green")
     public void test_007_forest() throws IOException {
-        HttpPost request = new HttpPost("http://colornamer-env.bwufiyp3dz.us-west-2.elasticbeanstalk.com/colornamer?origColor=forest");
+        HttpPost request = new HttpPost(request4 + "forest");
         CloseableHttpClient client = HttpClientBuilder.create().build();
         CloseableHttpResponse response = client.execute(request);
         HttpEntity entity = response.getEntity();
@@ -118,7 +119,7 @@ public class ColorNamerTests {
 
     @Test(description = "Verify green becomes Green")
     public void test_008_green() throws IOException {
-        HttpPost request = new HttpPost("http://colornamer-env.bwufiyp3dz.us-west-2.elasticbeanstalk.com/colornamer?origColor=green");
+        HttpPost request = new HttpPost(request4 + "green");
         CloseableHttpClient client = HttpClientBuilder.create().build();
         CloseableHttpResponse response = client.execute(request);
         HttpEntity entity = response.getEntity();
@@ -132,7 +133,7 @@ public class ColorNamerTests {
 
     @Test(description = "Verify 500 Error with unsupported color")
     public void test_009_500_Error() throws IOException {
-        HttpPost request = new HttpPost("http://colornamer-env.bwufiyp3dz.us-west-2.elasticbeanstalk.com/colornamer?origColor=Hello");
+        HttpPost request = new HttpPost(request4 + "Hello");
         CloseableHttpClient client = HttpClientBuilder.create().build();
         CloseableHttpResponse response = client.execute(request);
         HttpEntity entity = response.getEntity();
@@ -144,7 +145,7 @@ public class ColorNamerTests {
 
     @Test(description = "Verify 500 Error with Null data")
     public void test_010_500_Error() throws IOException {
-        HttpPost request = new HttpPost("http://colornamer-env.bwufiyp3dz.us-west-2.elasticbeanstalk.com/colornamer?origColor=");
+        HttpPost request = new HttpPost(request4);
         CloseableHttpClient client = HttpClientBuilder.create().build();
         CloseableHttpResponse response = client.execute(request);
         HttpEntity entity = response.getEntity();
@@ -156,7 +157,7 @@ public class ColorNamerTests {
     //there is no DB involved so not a really great test....this one will fail
     @Test(description = "Verify 500 Error with injection attempt")
     public void test_011_500_Error() throws IOException {
-        HttpPost request = new HttpPost("http://colornamer-env.bwufiyp3dz.us-west-2.elasticbeanstalk.com/colornamer?origColor='or 1=1;-");
+        HttpPost request = new HttpPost(request4 + "'or 1=1;-");
         CloseableHttpClient client = HttpClientBuilder.create().build();
         CloseableHttpResponse response = client.execute(request);
         HttpEntity entity = response.getEntity();
@@ -168,7 +169,7 @@ public class ColorNamerTests {
 
     @Test(description = "Verify api response time is where it should be")
     public void test_012_API_Response_Time() throws IOException {
-        HttpPost request = new HttpPost("http://colornamer-env.bwufiyp3dz.us-west-2.elasticbeanstalk.com/colornamer?origColor=green");
+        HttpPost request = new HttpPost(request4 + "green");
         CloseableHttpClient client = HttpClientBuilder.create().build();
         long startTime = System.currentTimeMillis();
         CloseableHttpResponse response = client.execute(request);
