@@ -2,18 +2,36 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
+      <artifact name="ColorNamer:war" />
       <artifact name="ColorNamer:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce19136c-643c-4ac3-a6a9-42d0e256b79c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/ColorNamer_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/azureSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okhttp3_okhttp_4_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okio_okio_2_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_13_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_1_3_61.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_common_1_3_50.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ColorNamerTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/ColorNamerTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ColorNamer_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/ColorNamer_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ColorNamer_war_exploded/WEB-INF/classes/ColorNamer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ColorNamer_war_exploded/WEB-INF/classes/ColorNamer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ColorNamer/ColorNamer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ColorNamer/ColorNamer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ColorNamer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ColorNamer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MyApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ColorNamer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ColorNamer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ColorNamer_war_exploded/WEB-INF/classes/ColorNamer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ColorNamer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ColorNamer_war_exploded/WEB-INF/classes/MyApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ColorNamer_war_exploded/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ColorNamer_war_exploded/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ColorNamer/ColorNamer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ColorNamer/MyApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MyApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,18 +67,24 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.CommitDialog" />
+    <property name="settings.editor.selected.configurable" value="com.intellij.jarRepository.settings.RemoteRepositoriesConfigurable" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="TestNG.ColorNamerTests.test_001_green">
     <configuration name="GlassFish 5.0.0" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 5.0.0" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER" value="false" />
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/ColorNamer_war_exploded/colornamer" />
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="ColorNamer:war exploded">
+          <settings />
+        </artifact>
+        <artifact name="ColorNamer:war">
           <settings />
         </artifact>
       </deployment>
@@ -125,9 +149,26 @@
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
           <artifact name="ColorNamer:war exploded" />
+          <artifact name="ColorNamer:war" />
         </option>
       </method>
     </configuration>
+    <configuration name="ColorNamerTests.test_001_green" type="TestNG" nameIsGenerated="true">
+      <module name="ColorNamer" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ColorNamerTests" />
+      <option name="METHOD_NAME" value="test_001_green" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="GlassFish Server.GlassFish 5.0.0" />
+      <item itemvalue="TestNG.ColorNamerTests.test_001_green" />
+    </list>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -138,6 +179,11 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="GlassFish Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="GlassFish Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -159,7 +205,11 @@
       <workItem from="1578615218184" duration="3593000" />
       <workItem from="1578619452725" duration="7858000" />
       <workItem from="1578637131921" duration="2775000" />
-      <workItem from="1578688461651" duration="259000" />
+      <workItem from="1578688461651" duration="5075000" />
+      <workItem from="1578730274409" duration="2170000" />
+      <workItem from="1578734047736" duration="576000" />
+      <workItem from="1578734938014" duration="1074000" />
+      <workItem from="1578763589983" duration="4413000" />
     </task>
     <servers />
   </component>
@@ -167,50 +217,54 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1165" y="217" key="#Project_Structure" timestamp="1578688710054">
+    <state x="1165" y="217" key="#Project_Structure" timestamp="1578688908365">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state x="1165" y="217" key="#Project_Structure/0.0.2560.1080@0.0.2560.1080" timestamp="1578688710054" />
-    <state x="1020" y="190" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578615585824">
+    <state x="1165" y="217" key="#Project_Structure/0.0.2560.1080@0.0.2560.1080" timestamp="1578688908365" />
+    <state x="1020" y="190" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578732109188">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state x="1020" y="190" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1578615585824" />
+    <state x="1020" y="190" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1578732109188" />
     <state x="1203" y="248" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1578688505244">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
     <state x="1203" y="248" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1578688505244" />
-    <state width="1008" height="272" key="GridCell.Tab.0.bottom" timestamp="1578639909264">
+    <state x="1346" y="276" key="FileChooserDialogImpl" timestamp="1578730532516">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="1008" height="272" key="GridCell.Tab.0.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1578639909264" />
-    <state width="1008" height="272" key="GridCell.Tab.0.center" timestamp="1578639909264">
+    <state x="1346" y="276" key="FileChooserDialogImpl/0.0.2560.1080@0.0.2560.1080" timestamp="1578730532516" />
+    <state width="962" height="221" key="GridCell.Tab.0.bottom" timestamp="1578768064122">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="1008" height="272" key="GridCell.Tab.0.center/0.0.2560.1080@0.0.2560.1080" timestamp="1578639909264" />
-    <state width="1008" height="272" key="GridCell.Tab.0.left" timestamp="1578639909264">
+    <state width="962" height="221" key="GridCell.Tab.0.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1578768064122" />
+    <state width="962" height="221" key="GridCell.Tab.0.center" timestamp="1578768064122">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="1008" height="272" key="GridCell.Tab.0.left/0.0.2560.1080@0.0.2560.1080" timestamp="1578639909264" />
-    <state width="1008" height="272" key="GridCell.Tab.0.right" timestamp="1578639909264">
+    <state width="962" height="221" key="GridCell.Tab.0.center/0.0.2560.1080@0.0.2560.1080" timestamp="1578768064122" />
+    <state width="962" height="221" key="GridCell.Tab.0.left" timestamp="1578768064122">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="1008" height="272" key="GridCell.Tab.0.right/0.0.2560.1080@0.0.2560.1080" timestamp="1578639909264" />
-    <state width="1008" height="272" key="GridCell.Tab.1.bottom" timestamp="1578639909265">
+    <state width="962" height="221" key="GridCell.Tab.0.left/0.0.2560.1080@0.0.2560.1080" timestamp="1578768064122" />
+    <state width="962" height="221" key="GridCell.Tab.0.right" timestamp="1578768064122">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="1008" height="272" key="GridCell.Tab.1.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1578639909265" />
-    <state width="1008" height="272" key="GridCell.Tab.1.center" timestamp="1578639909265">
+    <state width="962" height="221" key="GridCell.Tab.0.right/0.0.2560.1080@0.0.2560.1080" timestamp="1578768064122" />
+    <state width="858" height="272" key="GridCell.Tab.1.bottom" timestamp="1578765589842">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="1008" height="272" key="GridCell.Tab.1.center/0.0.2560.1080@0.0.2560.1080" timestamp="1578639909265" />
-    <state width="1008" height="272" key="GridCell.Tab.1.left" timestamp="1578639909265">
+    <state width="858" height="272" key="GridCell.Tab.1.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1578765589842" />
+    <state width="858" height="272" key="GridCell.Tab.1.center" timestamp="1578765589842">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="1008" height="272" key="GridCell.Tab.1.left/0.0.2560.1080@0.0.2560.1080" timestamp="1578639909265" />
-    <state width="1008" height="272" key="GridCell.Tab.1.right" timestamp="1578639909265">
+    <state width="858" height="272" key="GridCell.Tab.1.center/0.0.2560.1080@0.0.2560.1080" timestamp="1578765589842" />
+    <state width="858" height="272" key="GridCell.Tab.1.left" timestamp="1578765589842">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="1008" height="272" key="GridCell.Tab.1.right/0.0.2560.1080@0.0.2560.1080" timestamp="1578639909265" />
+    <state width="858" height="272" key="GridCell.Tab.1.left/0.0.2560.1080@0.0.2560.1080" timestamp="1578765589842" />
+    <state width="858" height="272" key="GridCell.Tab.1.right" timestamp="1578765589842">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state width="858" height="272" key="GridCell.Tab.1.right/0.0.2560.1080@0.0.2560.1080" timestamp="1578765589842" />
     <state width="1008" height="272" key="GridCell.Tab.2.bottom" timestamp="1578624368756">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
@@ -227,14 +281,18 @@
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
     <state width="1008" height="272" key="GridCell.Tab.2.right/0.0.2560.1080@0.0.2560.1080" timestamp="1578624368756" />
-    <state x="1005" y="190" key="SettingsEditor" timestamp="1578618662232">
+    <state x="763" y="282" key="Maven.ArtifactSearchDialog" timestamp="1578691344122">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state x="1005" y="190" key="SettingsEditor/0.0.2560.1080@0.0.2560.1080" timestamp="1578618662232" />
-    <state x="925" y="320" key="com.intellij.ide.util.TipDialog" timestamp="1578688464888">
+    <state x="763" y="282" key="Maven.ArtifactSearchDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1578691344122" />
+    <state x="1005" y="190" key="SettingsEditor" timestamp="1578732074107">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state x="925" y="320" key="com.intellij.ide.util.TipDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1578688464888" />
+    <state x="1005" y="190" key="SettingsEditor/0.0.2560.1080@0.0.2560.1080" timestamp="1578732074107" />
+    <state x="925" y="320" key="com.intellij.ide.util.TipDialog" timestamp="1578763593101">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state x="925" y="320" key="com.intellij.ide.util.TipDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1578763593101" />
     <state x="1269" y="165" width="607" height="789" key="find.popup" timestamp="1578639501386">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
