@@ -19,7 +19,7 @@ public class ColorNamerTests {
     String request4 = "http://Colornamer-env-1.g8svmtmvgs.us-west-2.elasticbeanstalk.com/colornamer?origColor=";
 
 
-    @Test(description = "Verify aqua becomes Green")
+    @Test(description = "Verify aqua becomes Blue")
     public void test_001_aqua() throws IOException {
         HttpPost request = new HttpPost(request4 +"aqua");
         CloseableHttpClient client = HttpClientBuilder.create().build();
@@ -33,7 +33,7 @@ public class ColorNamerTests {
         client.close();
     }
 
-    @Test(description = "Verify azul becomes Green")
+    @Test(description = "Verify azul becomes Blue")
     public void test_002_azul() throws IOException {
         HttpPost request = new HttpPost(request4 + "azul");
         CloseableHttpClient client = HttpClientBuilder.create().build();
@@ -47,7 +47,7 @@ public class ColorNamerTests {
         client.close();
     }
 
-    @Test(description = "Verify turquoise becomes Green")
+    @Test(description = "Verify turquoise becomes Blue")
     public void test_003_turquoise() throws IOException {
         HttpPost request = new HttpPost(request4 + "turquoise");
         CloseableHttpClient client = HttpClientBuilder.create().build();
@@ -133,7 +133,7 @@ public class ColorNamerTests {
 
     @Test(description = "Verify 500 Error with unsupported color")
     public void test_009_500_Error() throws IOException {
-        HttpPost request = new HttpPost(request4 + "Hello");
+        HttpPost request = new HttpPost(request4 + "yellow");
         CloseableHttpClient client = HttpClientBuilder.create().build();
         CloseableHttpResponse response = client.execute(request);
         HttpEntity entity = response.getEntity();
@@ -154,7 +154,7 @@ public class ColorNamerTests {
         Assert.assertTrue(response.getStatusLine().toString().contentEquals("HTTP/1.1 500 Internal Server Error"));
         client.close();
     }
-    //there is no DB involved so not a really great test....this one will fail
+    //there is no DB involved so not a really great test....this one will fail as it causes an error in the function call
     @Test(description = "Verify 500 Error with injection attempt")
     public void test_011_500_Error() throws IOException {
         HttpPost request = new HttpPost(request4 + "'or 1=1;-");
@@ -166,8 +166,8 @@ public class ColorNamerTests {
         Assert.assertTrue(response.getStatusLine().toString().contentEquals("HTTP/1.1 500 Internal Server Error"));
         client.close();
     }
-
-    @Test(description = "Verify api response time is where it should be")
+    //one very basic performance test
+    @Test(description = "Verify api response time is < 100ms>")
     public void test_012_API_Response_Time() throws IOException {
         HttpPost request = new HttpPost(request4 + "green");
         CloseableHttpClient client = HttpClientBuilder.create().build();
