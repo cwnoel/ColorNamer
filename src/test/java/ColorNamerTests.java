@@ -15,8 +15,8 @@ public class ColorNamerTests {
    // For testing both local and AWS deployments
     String request = "http://localhost:8080/ColorNamer_war_exploded/colornamer?origColor=";
     String request2 = "http://localhost:8080/ColorNamer_war/colornamer?origColor=";
-    String request3 = "http://ec2-44-229-32-205.us-west-2.compute.amazonaws.com/colornamer?origColor=";
-    String request4 = "http://colornamer-env.bwufiyp3dz.us-west-2.elasticbeanstalk.com/colornamer?origColor=";
+    String request3 = "http://ec2-52-32-3-44.us-west-2.compute.amazonaws.com/colornamer?origColor=";
+    String request4 = "http://Colornamer-env-1.g8svmtmvgs.us-west-2.elasticbeanstalk.com/colornamer?origColor=";
 
 
     @Test(description = "Verify aqua becomes Green")
