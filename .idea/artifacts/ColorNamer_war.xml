@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="ColorNamer:war">
-    <output-path>$PROJECT_DIR$/out/artifacts/ColorNamer_war</output-path>
-    <root id="archive" name="ColorNamer_war.war">
-      <element id="artifact" artifact-name="ColorNamer:war exploded" />
-    </root>
-  </artifact>
-</component>
