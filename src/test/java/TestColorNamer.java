@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 
-public class ColorNamerTests {
+public class TestColorNamer {
 
    // Service is hosted on AWS using elasticbeanstalk
    // Service will handle both lower and upper case version of harmonized color
